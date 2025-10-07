@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundición Munarriz Grupo HM - Productos en Metal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="https://i.postimg.cc/Y0Z3T4X5/Captura-de-Pantalla-2025-09-15-a-la-s-22-45-08-removebg-preview-1.png" alt="Logo Fundición Munarriz" class="nav-logo-image">
+                    <div class="nav-logo-text">
+                    <h1>H.M GRUPO MUNARRIZ</h1>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">INICIO</a></li>
+                    <li><a href="#nosotros" class="nav-link">NOSOTROS</a></li>
+                    <li><a href="#contacto" class="nav-link">CONTACTO</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Calculator Icon -->
+    <div class="calculator-icon" id="calculatorIcon">
+        <i class="fas fa-calculator"></i>
+        <span class="calculator-count" id="calculatorCount">0</span>
+    </div>
+
+    <!-- Image Carousel (First) -->
+    <div class="image-carousel">
+        <div class="carousel-title">
+            <h2>NUESTROS PRODUCTOS</h2>
+            <p>Descubre nuestra colección de artículos decorativos en metal</p>
+            </div>
+        <button class="carousel-btn prev" id="prevBtn">‹</button>
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Se generará dinámicamente -->
+            </div>
+        </div>
+        <button class="carousel-btn next" id="nextBtn">›</button>
+        <button class="carousel-reload-btn" id="carouselReload" title="Recargar imágenes del carrusel">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+        </div>
+
+    <!-- Products Section -->
+    <section id="productos" class="products">
+        <div class="container">
+            <div class="section-title-bar">
+                <h2>PRODUCTOS</h2>
+            </div>
+            
+            <!-- Category Navigation (Second) -->
+            <div class="category-navigation">
+                <button class="category-btn active" data-category="all">TODOS</button>
+                <button class="category-btn" data-category="CARTEROS">CARTEROS</button>
+                <button class="category-btn" data-category="LETRAS">LETRAS</button>
+                <button class="category-btn" data-category="MANILLONES">MANILLONES</button>
+                <button class="category-btn" data-category="NUMEROS">NUMEROS</button>
+                <button class="category-btn" data-category="PARDRES">PARDRES</button>
+                <button class="category-btn" data-category="PLACAS PARA DEPA">PLACAS</button>
+                <button class="category-btn" data-category="TOCAPUERTAS">TOCAPUERTAS</button>
+            </div>
+            
+            
+            
+            <!-- Products Grid (Opens when clicking buttons) -->
+            <div class="products-container" id="products-container">
+                <!-- Se generará dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>FUNDICIÓN MUNARRIZ</h1>
+            <h2>GRUPO HM</h2>
+            <p>Artículos Decorativos y Proyectos de Diseño</p>
+            <div class="hero-subtitle">
+                <h3>BRONCE, HIERRO & ACERO</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <h2>NOSOTROS</h2>
+                    <p>En H.M, con 17 años de experiencia desde nuestro inicio en 2008, nos especializamos en la fabricación de material zamac con acabados en tono acero, dorado y bronce antiguo.</p>
+                    
+                    <p>Nacimos como un proyecto familiar, forjando nuestro camino con habilidades y pasión por la metalmecánica.</p>
+                    
+                    <p>Ayudamos a comerciantes y clientes de gran volumen a mejorar su negocio con variedad, durabilidad, exclusividad y acabados superiores.</p>
+                    
+                    <p>Nos diferenciamos con una garantía 100% efectiva: si el producto no cumple nuestros estándares por fallas de fabricación, el cambio es automático.</p>
+                    
+                    <p>Mejoramos cualquier precio del mercado para ventas al por mayor, con lista de espera eficiente y asesoría personalizada.</p>
+                </div>
+                
+                <!-- Galería de imágenes NOSOTROS -->
+                <div class="nosotros-images">
+                    <div class="nosotros-image-item">
+                        <img src="NOSOTROS/Imagen de WhatsApp 2025-04-24 a las 22.30.45_27366eeb.jpg" alt="Fundición Munarriz - Proceso artesanal">
+                    </div>
+                    <div class="nosotros-image-item">
+                        <img src="NOSOTROS/image19.jpeg" alt="Fundición Munarriz - Taller de fundición">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>CONTACTO</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+51 999 999 999</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@pinki.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lima, Perú</span>
+                </div>
+            </div>
+            <div class="contact-hours">
+                <p><strong>HORARIO DE ATENCIÓN:</strong> Lunes a Viernes 9:30 am – 1:00 pm 3:00 – 6:30 pm</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>FUNDICIÓN MUNARRIZ</h3>
+                    <p>GRUPO HM</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/FundicionH.M/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/grupo.munarriz" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fundición Munarriz Grupo HM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="image-modal-content">
+            <div class="image-modal-header">
+                <h3 id="imageModalTitle">Producto</h3>
+                <button class="image-modal-close" id="imageModalClose">&times;</button>
+            </div>
+            <div class="image-modal-body">
+                <img id="imageModalImage" src="" alt="Producto" class="image-modal-img">
+            </div>
+            <div class="add-to-quote-section" id="addToQuoteSection">
+                <!-- Se generará dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Modal -->
+    <div class="quote-modal" id="quoteModal">
+        <div class="quote-modal-content">
+            <div class="quote-modal-header">
+                <h2><i class="fas fa-calculator"></i> Cotización de Productos</h2>
+                <button class="quote-close" id="quoteClose">&times;</button>
+            </div>
+            <div class="quote-modal-body" id="quoteModalBody">
+                <div class="quote-empty" id="quoteEmpty">
+                    <i class="fas fa-calculator"></i>
+                    <p>No hay productos en tu cotización</p>
+                </div>
+                <div class="quote-items" id="quoteItems">
+                    <!-- Se generará dinámicamente -->
+                </div>
+            </div>
+            <div class="quote-modal-footer" id="quoteModalFooter">
+                <button class="quote-request-btn" id="quoteRequest">
+                    <i class="fas fa-paper-plane"></i> Solicitar Cotización
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-content">
+            <div class="contact-modal-header">
+                <h2><i class="fas fa-user"></i> Datos de Contacto</h2>
+                <button class="contact-close" id="contactClose">&times;</button>
+            </div>
+            <div class="contact-modal-body">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Nombres Completos *</label>
+                        <input type="text" id="contactName" name="name" required placeholder="Ingresa tu nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Número de Celular *</label>
+                        <input type="tel" id="contactPhone" name="phone" required placeholder="Ej: +51 999 999 999">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Correo Electrónico *</label>
+                        <input type="email" id="contactEmail" name="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Mensaje Adicional (Opcional)</label>
+                        <textarea id="contactMessage" name="message" placeholder="Comentarios adicionales sobre tu cotización..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-modal-footer">
+                <button type="button" class="contact-cancel-btn" id="contactCancel">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </button>
+                <button type="submit" form="contactForm" class="contact-continue-btn" id="contactContinue">
+                    Continuar <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-modal-content">
+            <div class="preview-modal-header">
+                <h2><i class="fas fa-eye"></i> Vista Previa de Cotización</h2>
+                <button class="preview-close" id="previewClose">&times;</button>
+            </div>
+            <div class="preview-modal-body">
+                <div class="preview-contact-info" id="previewContactInfo">
+                    <!-- Se generará dinámicamente -->
+                </div>
+                <div class="preview-products" id="previewProducts">
+                    <!-- Se generará dinámicamente -->
+                </div>
+            </div>
+            <div class="preview-modal-footer">
+                <button type="button" class="preview-back-btn" id="previewBack">
+                    <i class="fas fa-arrow-left"></i> Volver a Editar
+                </button>
+                <button type="button" class="preview-send-btn" id="previewSend">
+                    <i class="fas fa-paper-plane"></i> Enviar Cotización
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=16"></script>
+</body>
+</html>
