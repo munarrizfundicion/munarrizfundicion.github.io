@@ -429,8 +429,14 @@ function moveCarousel(direction) {
 function updateCarousel() {
     if (!carouselTrack || allImages.length === 0) return;
     
-    const translateX = -currentIndex * 100;
-    carouselTrack.style.transform = `translateX(${translateX}%)`;
+    // Calcular el ancho de cada elemento incluyendo el gap
+    const itemWidth = 350; // min-width del carousel-item
+    const gap = 24; // 1.5rem = 24px
+    const totalItemWidth = itemWidth + gap;
+    
+    // Mover solo la distancia necesaria para la siguiente imagen
+    const translateX = -currentIndex * totalItemWidth;
+    carouselTrack.style.transform = `translateX(${translateX}px)`;
 }
 
 function startAutoPlay() {
