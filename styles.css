@@ -1224,24 +1224,7 @@ body {
 }
 
 .gallery-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        linear-gradient(
-            135deg,
-            rgba(255, 215, 0, 0.18) 0%,
-            rgba(255, 215, 0, 0.06) 50%,
-            rgba(255, 215, 0, 0.14) 100%
-        ),
-        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 70% 70%, rgba(0, 0, 0, 0.12) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-    transition: all 0.4s ease;
+    display: none;
 }
 
 .gallery-item:hover {
@@ -1254,12 +1237,7 @@ body {
 }
 
 .gallery-item:hover::before {
-    background: linear-gradient(
-        135deg,
-        rgba(255, 215, 0, 0.3) 0%,
-        rgba(255, 215, 0, 0.12) 50%,
-        rgba(255, 215, 0, 0.25) 100%
-    );
+    display: none;
 }
 
 .gallery-item img {
@@ -1311,17 +1289,7 @@ body {
 }
 
 .gallery::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
-        linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
-    pointer-events: none;
+    display: none;
 }
 
 .gallery-header {
@@ -1407,7 +1375,6 @@ body {
 
 .gallery-item:hover img {
     transform: scale(1.05);
-    filter: sepia(0.3) contrast(1.5) brightness(1.1) saturate(1.4);
 }
 
 .gallery-item-info {
@@ -1507,7 +1474,6 @@ body {
     max-height: 400px;
     object-fit: contain;
     border-radius: 8px;
-    filter: sepia(0.3) contrast(1.2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -1625,7 +1591,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(0.3) contrast(1.2);
     transition: transform 0.3s ease;
 }
 
