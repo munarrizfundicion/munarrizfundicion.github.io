@@ -65,6 +65,9 @@ async function initializeApp() {
         // Inicializar modales de contacto y vista previa
         initializeContactModals();
         
+        // Inicializar modal de productos
+        initializeProductosModal();
+        
         hideLoading();
         
         console.log('=== INICIALIZACIÓN COMPLETADA ===');
@@ -77,12 +80,8 @@ async function initializeApp() {
 
 function setupEventListeners() {
     // Event listeners para el carrusel
-    const prevBtn = document.getElementById('carouselPrev');
-    const nextBtn = document.getElementById('carouselNext');
     const reloadBtn = document.getElementById('carouselReload');
     
-    if (prevBtn) prevBtn.addEventListener('click', () => moveCarousel(-1));
-    if (nextBtn) nextBtn.addEventListener('click', () => moveCarousel(1));
     if (reloadBtn) reloadBtn.addEventListener('click', reloadCarousel);
     
     // Event listeners para el sistema de cotizaciones
@@ -391,68 +390,27 @@ function initializeCarousel() {
         return;
     }
     
-    console.log('Inicializando carrusel con', allImages.length, 'imágenes');
+    console.log('Inicializando carrusel infinito con', allImages.length, 'imágenes');
     
-    // Generar HTML del carrusel
-    const carouselHTML = allImages.map((image, index) => `
+    // Generar HTML del carrusel - duplicamos las imágenes para el efecto infinito
+    const carouselHTML = [...allImages, ...allImages].map((image, index) => `
         <div class="carousel-item" onclick="openImageModal('${image.path}', '${image.name}', 'PASARELLA', '')">
             <img src="${image.path}" alt="${image.name}" onerror="console.log('Error cargando:', this.src)">
             <div class="carousel-item-info">
                 <h3>${image.name.replace(/\.(JPG|jpg|jpeg|png|gif|webp)$/i, '')}</h3>
-                    </div>
-                </div>
+            </div>
+        </div>
     `).join('');
     
     carouselTrack.innerHTML = carouselHTML;
-    console.log('Carrusel HTML generado');
-    
-    // Iniciar autoplay
-    startAutoPlay();
+    console.log('Carrusel infinito HTML generado con', allImages.length * 2, 'elementos');
 }
 
-function moveCarousel(direction) {
-    if (isAnimating || allImages.length === 0) return;
-    
-    isAnimating = true;
-    currentIndex += direction;
-    
-    if (currentIndex >= allImages.length) {
-        currentIndex = 0;
-    } else if (currentIndex < 0) {
-        currentIndex = allImages.length - 1;
-    }
-    
-    updateCarousel();
-    isAnimating = false;
-}
+// Función eliminada - ya no necesaria para carrusel infinito
 
-function updateCarousel() {
-    if (!carouselTrack || allImages.length === 0) return;
-    
-    // Calcular el ancho de cada elemento incluyendo el gap
-    const itemWidth = 350; // min-width del carousel-item
-    const gap = 24; // 1.5rem = 24px
-    const totalItemWidth = itemWidth + gap;
-    
-    // Mover solo la distancia necesaria para la siguiente imagen
-    const translateX = -currentIndex * totalItemWidth;
-    carouselTrack.style.transform = `translateX(${translateX}px)`;
-}
+// Función eliminada - ya no necesaria para carrusel infinito
 
-function startAutoPlay() {
-    if (autoPlayInterval) clearInterval(autoPlayInterval);
-    
-    autoPlayInterval = setInterval(() => {
-        moveCarousel(1);
-    }, 3000);
-}
-
-function stopAutoPlay() {
-    if (autoPlayInterval) {
-        clearInterval(autoPlayInterval);
-        autoPlayInterval = null;
-    }
-}
+// Funciones eliminadas - ya no necesarias para carrusel infinito
 
 function reloadCarousel() {
     console.log('🔄 Recargando carrusel...');
@@ -790,3 +748,73 @@ window.clearAllData = () => {
     localStorage.clear();
     updateQuoteDisplay();
 };
+
+// ==================== FUNCIONALIDAD DEL MODAL DE PRODUCTOS ====================
+function initializeProductosModal() {
+    console.log('Inicializando modal de productos...');
+    const productosNavBtn = document.getElementById('productosNavBtn');
+    const productosModal = document.getElementById('productosModal');
+    const productosModalClose = document.getElementById('productosModalClose');
+    
+    console.log('productosNavBtn:', productosNavBtn);
+    console.log('productosModal:', productosModal);
+    console.log('productosModalClose:', productosModalClose);
+    
+    // Abrir modal al hacer clic en el botón de navegación
+    if (productosNavBtn) {
+        productosNavBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('Clic en botón PRODUCTOS');
+            openProductosModal();
+        });
+        console.log('Event listener agregado al botón PRODUCTOS');
+    } else {
+        console.error('No se encontró el botón productosNavBtn');
+    }
+    
+    // Cerrar modal con el botón X
+    if (productosModalClose) {
+        productosModalClose.addEventListener('click', () => {
+            closeProductosModal();
+        });
+    }
+    
+    // Cerrar modal al hacer clic fuera del contenido
+    if (productosModal) {
+        productosModal.addEventListener('click', (e) => {
+            if (e.target === productosModal) {
+                closeProductosModal();
+            }
+        });
+    }
+    
+    // Cerrar modal con la tecla Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && productosModal && productosModal.style.display === 'block') {
+            closeProductosModal();
+        }
+    });
+}
+
+function openProductosModal() {
+    console.log('Abriendo modal de productos...');
+    const productosModal = document.getElementById('productosModal');
+    if (productosModal) {
+        productosModal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+        
+        // Hacer scroll al inicio del modal
+        productosModal.scrollTop = 0;
+        console.log('Modal de productos abierto');
+    } else {
+        console.error('No se pudo abrir el modal: elemento no encontrado');
+    }
+}
+
+function closeProductosModal() {
+    const productosModal = document.getElementById('productosModal');
+    if (productosModal) {
+        productosModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restaurar scroll del body
+    }
+}
