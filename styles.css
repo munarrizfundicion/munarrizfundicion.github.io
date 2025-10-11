@@ -116,8 +116,8 @@ body {
 }
 
 .nav-logo-image {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -128,27 +128,38 @@ body {
 }
 
 .nav-logo-text h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #FFD700;
+    font-family: 'Impact', 'Arial Black', 'Franklin Gothic Heavy', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #B8860B;
     margin-bottom: 0.2rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     text-shadow: 
-        1px 1px 0px #B8860B,
-        2px 2px 0px #8B4513,
-        3px 3px 0px #654321,
-        4px 4px 4px rgba(0, 0, 0, 0.9),
-        0 0 10px rgba(255, 215, 0, 0.6),
-        inset 1px 1px 2px rgba(255, 255, 255, 0.4),
-        inset -1px -1px 2px rgba(0, 0, 0, 0.3);
-    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+        1px 1px 0px #8B4513,
+        2px 2px 0px #654321,
+        3px 3px 0px #2F1B14,
+        4px 4px 0px #000000,
+        5px 5px 0px #000000,
+        6px 6px 0px #000000,
+        7px 7px 0px #000000,
+        8px 8px 0px #000000,
+        9px 9px 0px #000000,
+        10px 10px 0px #000000,
+        11px 11px 0px #000000,
+        12px 12px 0px #000000,
+        13px 13px 0px #000000,
+        14px 14px 0px #000000,
+        15px 15px 0px #000000,
+        0 0 20px rgba(184, 134, 11, 0.6),
+        inset 3px 3px 6px rgba(255, 215, 0, 0.8),
+        inset -3px -3px 6px rgba(0, 0, 0, 0.9);
+    filter: drop-shadow(0 0 15px rgba(184, 134, 11, 0.5));
 }
 
 .nav-logo-text h2 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #FFFFFF;
     margin: 0;
@@ -169,7 +180,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #000000;
     font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -191,8 +202,8 @@ body {
         0 4px 8px rgba(0, 0, 0, 0.3),
         0 0 10px rgba(255, 215, 0, 0.4);
     text-shadow: 
-        1px 1px 2px rgba(0, 0, 0, 0.8),
-        0 0 4px rgba(255, 215, 0, 0.5);
+        1px 1px 2px rgba(255, 255, 255, 0.9),
+        0 0 6px rgba(255, 255, 255, 0.7);
 }
 
 .nav-link:hover {
@@ -296,7 +307,9 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #000 100%);
+    background: url('https://247consultores.pe/angelly/fondo_2.jpg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #FFD700;
     padding: 120px 0 80px;
     text-align: center;
@@ -312,13 +325,27 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,215,0,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
+    background: url('https://247consultores.pe/angelly/fondo_2.jpg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 2;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero h1 {
@@ -326,7 +353,7 @@ body {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #FFD700;
+    color: #B88B00;
     letter-spacing: 2px;
 }
 
@@ -335,14 +362,14 @@ body {
     margin-bottom: 1rem;
     font-weight: 300;
     letter-spacing: 2px;
-    color: #f0f0f0;
+    color: #000000;
 }
 
 .hero p {
     font-size: 0.9rem;
     margin-bottom: 2rem;
     opacity: 0.9;
-    color: #ccc;
+    color: #000000;
     font-weight: 300;
 }
 
@@ -351,11 +378,11 @@ body {
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 2px;
-    border-top: 1px solid rgba(255, 215, 0, 0.5);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+    border-top: 1px solid rgba(184, 139, 0, 0.5);
+    border-bottom: 1px solid rgba(184, 139, 0, 0.5);
     padding: 0.8rem 0;
     display: inline-block;
-    color: #FFD700;
+    color: #B88B00;
 }
 
 /* About Section */
@@ -2380,8 +2407,16 @@ body {
     }
     
     .nav-logo-image {
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
+    }
+    
+    .nav-logo-text h1 {
+        font-size: 1.4rem;
+    }
+    
+    .nav-logo-text h2 {
+        font-size: 0.9rem;
     }
     
     .cart-icon {
@@ -2481,8 +2516,16 @@ body {
     }
     
     .nav-logo-image {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .nav-logo-text h1 {
+        font-size: 1.1rem;
+    }
+    
+    .nav-logo-text h2 {
+        font-size: 0.8rem;
     }
     
     .hero {
@@ -2557,7 +2600,7 @@ body {
     /* Estilos de botones del carrusel eliminados */
 }
 
-/* ==================== MODAL DE PRODUCTOS (PANTALLA COMPLETA) ==================== */
+/* ==================== SIDEBAR DE PRODUCTOS ==================== */
 .productos-modal {
     display: none;
     position: fixed;
@@ -2571,15 +2614,18 @@ body {
     backdrop-filter: blur(5px);
 }
 
+.productos-modal.active {
+    display: block;
+}
+
 .productos-modal-content {
     position: relative;
-    width: 95%;
-    max-width: 1800px;
-    margin: 2rem auto;
-    background: #1a1a1a;
-    border-radius: 12px;
-    box-shadow: 0 10px 50px rgba(255, 215, 0, 0.3);
-    border: 2px solid #FFD700;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-right: 4px solid #FFD700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+    overflow-y: auto;
 }
 
 .productos-modal-header {
@@ -2587,7 +2633,6 @@ body {
     top: 0;
     background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
     padding: 1.5rem 2rem;
-    border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2628,24 +2673,122 @@ body {
 }
 
 .productos-modal-body {
-    padding: 2rem;
-    max-height: calc(100vh - 150px);
-    overflow-y: auto;
-}
-
-/* Ajustar la sección de productos dentro del modal */
-.productos-modal-body .products {
     padding: 0;
-    background: transparent;
+    height: calc(100vh - 80px);
+    overflow: hidden;
 }
 
-/* Estilos responsivos para el modal */
+/* Layout interno del sidebar */
+.sidebar-layout {
+    display: flex;
+    height: 100%;
+}
+
+/* Sidebar de categorías (izquierda) */
+.categories-sidebar {
+    width: 280px;
+    background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-right: 2px solid #FFD700;
+    padding: 2rem 0;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    padding: 0 2rem 1.5rem 2rem;
+    border-bottom: 1px solid #FFD700;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-title h3 {
+    color: #FFD700;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.categories-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1.5rem;
+}
+
+.categories-nav .category-btn {
+    background: transparent;
+    border: 2px solid transparent;
+    color: #FFFFFF;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
+}
+
+.categories-nav .category-btn:hover {
+    background: rgba(255, 215, 0, 0.1);
+    border-color: #FFD700;
+    color: #FFD700;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.categories-nav .category-btn.active {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    border-color: #FFD700;
+    color: #000;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.categories-nav .category-btn.active::before {
+    content: '▶';
+    position: absolute;
+    right: 1rem;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Área principal de productos (derecha) */
+.products-main-area {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background: #1a1a1a;
+}
+
+.products-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #FFD700;
+}
+
+.products-header h2 {
+    color: #FFD700;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.products-main-area .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Estilos responsivos para el sidebar */
 @media (max-width: 768px) {
-    .productos-modal-content {
-        width: 98%;
-        margin: 1rem auto;
-    }
-    
     .productos-modal-header {
         padding: 1rem;
     }
@@ -2660,8 +2803,78 @@ body {
         font-size: 2rem;
     }
     
-    .productos-modal-body {
+    .categories-sidebar {
+        width: 240px;
+        padding: 1rem 0;
+    }
+    
+    .sidebar-title {
+        padding: 0 1rem 1rem 1rem;
+    }
+    
+    .sidebar-title h3 {
+        font-size: 1rem;
+    }
+    
+    .categories-nav {
+        padding: 0 1rem;
+        gap: 0.3rem;
+    }
+    
+    .categories-nav .category-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .products-main-area {
         padding: 1rem;
+    }
+    
+    .products-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .products-main-area .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-layout {
+        flex-direction: column;
+    }
+    
+    .categories-sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        border-right: none;
+        border-bottom: 2px solid #FFD700;
+    }
+    
+    .categories-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .categories-nav .category-btn {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+        padding: 0.6rem 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .products-main-area {
+        height: calc(100vh - 300px);
+    }
+    
+    .products-main-area .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
     }
 }
 
