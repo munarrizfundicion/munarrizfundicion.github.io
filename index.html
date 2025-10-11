@@ -16,12 +16,14 @@
                 <div class="nav-logo">
                     <img src="https://i.postimg.cc/Y0Z3T4X5/Captura-de-Pantalla-2025-09-15-a-la-s-22-45-08-removebg-preview-1.png" alt="Logo Fundición Munarriz" class="nav-logo-image">
                     <div class="nav-logo-text">
-                    <h1>H.M GRUPO MUNARRIZ</h1>
+                        <h1>FUNDICION MUNARRIZ</h1>
+                        <h2>DEL GRUPO MUNARRIZ SAC</h2>
                     </div>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">INICIO</a></li>
                     <li><a href="#nosotros" class="nav-link">NOSOTROS</a></li>
+                    <li><a href="#" class="nav-link" id="productosNavBtn">PRODUCTOS</a></li>
                     <li><a href="#contacto" class="nav-link">CONTACTO</a></li>
                 </ul>
                 <div class="hamburger">
@@ -44,46 +46,53 @@
         <div class="carousel-title">
             <h2>NUESTROS PRODUCTOS</h2>
             <p>Descubre nuestra colección de artículos decorativos en metal</p>
-            </div>
-        <button class="carousel-btn prev" id="prevBtn">‹</button>
+        </div>
         <div class="carousel-container">
             <div class="carousel-track" id="carouselTrack">
                 <!-- Se generará dinámicamente -->
             </div>
         </div>
-        <button class="carousel-btn next" id="nextBtn">›</button>
         <button class="carousel-reload-btn" id="carouselReload" title="Recargar imágenes del carrusel">
             <i class="fas fa-sync-alt"></i>
         </button>
-        </div>
+    </div>
 
-    <!-- Products Section -->
-    <section id="productos" class="products">
-        <div class="container">
-            <div class="section-title-bar">
-                <h2>PRODUCTOS</h2>
+    <!-- Products Modal (Fullscreen) -->
+    <div class="productos-modal" id="productosModal">
+        <div class="productos-modal-content">
+            <div class="productos-modal-header">
+                <h2>CATÁLOGO DE PRODUCTOS</h2>
+                <button class="productos-modal-close" id="productosModalClose">&times;</button>
             </div>
-            
-            <!-- Category Navigation (Second) -->
-            <div class="category-navigation">
-                <button class="category-btn active" data-category="all">TODOS</button>
-                <button class="category-btn" data-category="CARTEROS">CARTEROS</button>
-                <button class="category-btn" data-category="LETRAS">LETRAS</button>
-                <button class="category-btn" data-category="MANILLONES">MANILLONES</button>
-                <button class="category-btn" data-category="NUMEROS">NUMEROS</button>
-                <button class="category-btn" data-category="PARDRES">PARDRES</button>
-                <button class="category-btn" data-category="PLACAS PARA DEPA">PLACAS</button>
-                <button class="category-btn" data-category="TOCAPUERTAS">TOCAPUERTAS</button>
-            </div>
-            
-            
-            
-            <!-- Products Grid (Opens when clicking buttons) -->
-            <div class="products-container" id="products-container">
-                <!-- Se generará dinámicamente -->
+            <div class="productos-modal-body">
+                <!-- Products Section -->
+                <section id="productos" class="products">
+                    <div class="container">
+                        <div class="section-title-bar">
+                            <h2>PRODUCTOS</h2>
+                        </div>
+                        
+                        <!-- Category Navigation -->
+                        <div class="category-navigation">
+                            <button class="category-btn active" data-category="all">TODOS</button>
+                            <button class="category-btn" data-category="CARTEROS">CARTEROS</button>
+                            <button class="category-btn" data-category="LETRAS">LETRAS</button>
+                            <button class="category-btn" data-category="MANILLONES">MANILLONES</button>
+                            <button class="category-btn" data-category="NUMEROS">NUMEROS</button>
+                            <button class="category-btn" data-category="PARDRES">PARDRES</button>
+                            <button class="category-btn" data-category="PLACAS PARA DEPA">PLACAS</button>
+                            <button class="category-btn" data-category="TOCAPUERTAS">TOCAPUERTAS</button>
+                        </div>
+                        
+                        <!-- Products Grid -->
+                        <div class="products-container" id="products-container">
+                            <!-- Se generará dinámicamente -->
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
@@ -92,7 +101,7 @@
             <h2>GRUPO HM</h2>
             <p>Artículos Decorativos y Proyectos de Diseño</p>
             <div class="hero-subtitle">
-                <h3>BRONCE, HIERRO & ACERO</h3>
+                <h3>EXCLUSIVIDADES EN ZAMAC</h3>
             </div>
         </div>
     </section>
@@ -103,15 +112,17 @@
             <div class="nosotros-content">
                 <div class="nosotros-text">
                     <h2>NOSOTROS</h2>
-                    <p>En H.M, con 17 años de experiencia desde nuestro inicio en 2008, nos especializamos en la fabricación de material zamac con acabados en tono acero, dorado y bronce antiguo.</p>
+                    <p>Llevamos más de una década transformando, creando & fabricando con precisión experiencia & dedicación.</p>
                     
-                    <p>Nacimos como un proyecto familiar, forjando nuestro camino con habilidades y pasión por la metalmecánica.</p>
+                    <p>El zamac es nuestro aliado: resistente, versátil & elegante para convertir piezas únicas que reflejan estilo & durabilidad.</p>
                     
-                    <p>Ayudamos a comerciantes y clientes de gran volumen a mejorar su negocio con variedad, durabilidad, exclusividad y acabados superiores.</p>
+                    <p>Nuestras creaciones acompañan a sectores como la construcción, ebanistería, ferretería y decoración, ofreciendo tiradores y complementos metálicos que realzan cada proyecto.</p>
                     
-                    <p>Nos diferenciamos con una garantía 100% efectiva: si el producto no cumple nuestros estándares por fallas de fabricación, el cambio es automático.</p>
+                    <p>Respaldamos nuestro trabajo con una Garantía del 100% ante cualquier defecto de fabricación aplica nuestra política de reposición inmediata, asegurando la satisfacción total de nuestros clientes.</p>
                     
-                    <p>Mejoramos cualquier precio del mercado para ventas al por mayor, con lista de espera eficiente y asesoría personalizada.</p>
+                    <p>Con precios competitivos en ventas al por mayor, atención personalizada y procesos de entrega eficientes, en Fundición Munarriz seguimos cumpliendo nuestro propósito:</p>
+                    
+                    <p><strong>Crear valor en cada pieza y llevar tu negocio al siguiente nivel.</strong></p>
                 </div>
                 
                 <!-- Galería de imágenes NOSOTROS -->
@@ -285,4 +296,3 @@
     <script src="script.js?v=16"></script>
 </body>
 </html>
-
