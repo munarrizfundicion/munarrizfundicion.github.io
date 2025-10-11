@@ -65,15 +65,13 @@
                 <button class="productos-modal-close" id="productosModalClose">&times;</button>
             </div>
             <div class="productos-modal-body">
-                <!-- Products Section -->
-                <section id="productos" class="products">
-                    <div class="container">
-                        <div class="section-title-bar">
-                            <h2>PRODUCTOS</h2>
+                <div class="sidebar-layout">
+                    <!-- Sidebar de categorías (izquierda) -->
+                    <div class="categories-sidebar">
+                        <div class="sidebar-title">
+                            <h3>CATEGORÍAS</h3>
                         </div>
-                        
-                        <!-- Category Navigation -->
-                        <div class="category-navigation">
+                        <nav class="categories-nav">
                             <button class="category-btn active" data-category="all">TODOS</button>
                             <button class="category-btn" data-category="CARTEROS">CARTEROS</button>
                             <button class="category-btn" data-category="LETRAS">LETRAS</button>
@@ -82,14 +80,19 @@
                             <button class="category-btn" data-category="PARDRES">PARDRES</button>
                             <button class="category-btn" data-category="PLACAS PARA DEPA">PLACAS</button>
                             <button class="category-btn" data-category="TOCAPUERTAS">TOCAPUERTAS</button>
+                        </nav>
+                    </div>
+                    
+                    <!-- Área de productos (derecha) -->
+                    <div class="products-main-area">
+                        <div class="products-header">
+                            <h2>PRODUCTOS</h2>
                         </div>
-                        
-                        <!-- Products Grid -->
                         <div class="products-container" id="products-container">
                             <!-- Se generará dinámicamente -->
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
     </div>
