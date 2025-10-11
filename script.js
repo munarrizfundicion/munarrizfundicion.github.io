@@ -247,7 +247,7 @@ async function loadDynamicFolders() {
             if (galleriesCreated === 0) {
                 console.log('⚠️ No se encontraron carpetas con imágenes en el JSON.');
             }
-        } else {
+    } else {
             console.log('❌ Error cargando JSON:', response.status);
             console.log('💡 Asegúrate de que el archivo images.json esté subido al servidor');
         }
@@ -356,8 +356,8 @@ function createGallerySection(folderName, images) {
                     </div>
                 </div>
             `).join('')}
-        </div>
-    `;
+                </div>
+            `;
     
     console.log('🎨 HTML de galería creado:', gallerySection.innerHTML.substring(0, 200) + '...');
     
@@ -665,13 +665,13 @@ function generatePreviewContent() {
             <div class="preview-product-item">
                 <div class="preview-product-thumbnail">
                     <img src="${item.image}" alt="${item.name}">
-                </div>
+                            </div>
                 <div class="preview-product-details">
                     <div class="preview-product-name">${item.name}</div>
                     <div class="preview-product-category">${item.category || 'Sin categoría'}</div>
                     <div class="preview-product-quantity">Cantidad: ${item.quantity}</div>
+                        </div>
             </div>
-        </div>
     `).join('');
     }
 }
@@ -784,37 +784,37 @@ function initializeProductosModal() {
         productosModal.addEventListener('click', (e) => {
             if (e.target === productosModal) {
                 closeProductosModal();
-            }
-        });
-    }
-    
-    // Cerrar modal con la tecla Escape
+        }
+    });
+}
+
+    // Cerrar sidebar con la tecla Escape
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && productosModal && productosModal.style.display === 'block') {
+        if (e.key === 'Escape' && productosModal && productosModal.classList.contains('active')) {
             closeProductosModal();
         }
     });
 }
 
 function openProductosModal() {
-    console.log('Abriendo modal de productos...');
+    console.log('Abriendo sidebar de productos...');
     const productosModal = document.getElementById('productosModal');
     if (productosModal) {
-        productosModal.style.display = 'block';
+        productosModal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevenir scroll del body
         
-        // Hacer scroll al inicio del modal
+        // Hacer scroll al inicio del sidebar
         productosModal.scrollTop = 0;
-        console.log('Modal de productos abierto');
+        console.log('Sidebar de productos abierto');
     } else {
-        console.error('No se pudo abrir el modal: elemento no encontrado');
+        console.error('No se pudo abrir el sidebar: elemento no encontrado');
     }
 }
 
 function closeProductosModal() {
     const productosModal = document.getElementById('productosModal');
     if (productosModal) {
-        productosModal.style.display = 'none';
+        productosModal.classList.remove('active');
         document.body.style.overflow = 'auto'; // Restaurar scroll del body
     }
 }
